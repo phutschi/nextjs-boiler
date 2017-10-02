@@ -1,12 +1,32 @@
 {
-  "name": "hauptstadt-support",
+  "name": "nextjs-eslint-jest-flow",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Philipp Wruck <philipp@perspective.co>",
   "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next",
+    "build": "next-build",
+    "flow": "flow",
+    "test": "jest"
+  },
   "dependencies": {
     "next": "^4.0.0-beta.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "enzyme": "^3.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.56.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
   }
 }
