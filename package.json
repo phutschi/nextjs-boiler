@@ -5,8 +5,8 @@
   "author": "Philipp Wruck <philipp@perspective.co>",
   "license": "MIT",
   "scripts": {
-    "start": "next start",
-    "dev": "next",
+    "start": "next start ./src",
+    "dev": "next ./src",
     "build": "next-build",
     "flow": "flow",
     "test": "jest"
