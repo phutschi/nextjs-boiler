@@ -15,9 +15,9 @@ npm install
 4. Start `next`:
 
 ```shell
-npm run dev // starts the development server with hot module reload etc.
-npm run build // builds your project for production in ./src
-npm run start // starts your built project (for production)
+npm run dev # starts the development server with hot module reload etc.
+npm run build # builds your project for production in ./src
+npm run start # starts your built project (for production)
 ```
 
 Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overview on how to use next.
