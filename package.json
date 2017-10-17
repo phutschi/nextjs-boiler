@@ -7,7 +7,7 @@
   "scripts": {
     "start": "next start ./src",
     "dev": "next ./src",
-    "build": "next-build",
+    "build": "next build ./src",
     "flow": "flow",
     "test": "jest"
   },
