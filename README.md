@@ -5,7 +5,7 @@ This package is meant to give fast start into creating small react applications.
 ## How to use
 1. Clone this repo & install dependencies:
 
-```zsh
+```shell
 git clone https://github.com/quiez/nextjs-eslint-jest-flow <your-project-name>
 npm install
 ```
@@ -14,7 +14,7 @@ npm install
 3. Start writing code!
 4. Start `next`:
 
-```zsh
+```shell
 npm run dev // starts the development server with hot module reload etc.
 npm run build // builds your project for production in ./src
 npm run start // starts your built project (for production)
