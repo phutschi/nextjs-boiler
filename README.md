@@ -1,11 +1,11 @@
 # nextjs-eslint-jest-flow
 
-This package is meant to give fast start into creating small react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and jest for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
+This package is meant to give fast start into creating small react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
 
 ## How to use
 1. Clone this repo & install dependencies:
 
-```shell
+```zsh
 git clone https://github.com/quiez/nextjs-eslint-jest-flow <your-project-name>
 npm install
 ```
@@ -14,7 +14,7 @@ npm install
 3. Start writing code!
 4. Start `next`:
 
-```shell
+```zsh
 npm run dev # starts the development server with hot module reload etc.
 npm run build # builds your project for production in ./src
 npm run start # starts your built project (for production)
