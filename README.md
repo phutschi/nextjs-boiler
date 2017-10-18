@@ -7,6 +7,7 @@ This package is meant to give fast start into creating small react applications.
 
 ```zsh
 git clone https://github.com/quiez/nextjs-eslint-jest-flow <your-project-name>
+cd <your-project-name>
 npm install
 ```
 
