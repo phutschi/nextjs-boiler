@@ -1,6 +1,6 @@
 # nextjs-eslint-jest-flow
 
-This package is meant to give fast start into creating small react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
+This package is meant to give fast start into creating react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
 
 ## Tree
 
