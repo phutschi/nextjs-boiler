@@ -13,6 +13,11 @@ describe( 'Button Component', () => {
 
         expect( wrapper.exists ).toBeTruthy()
     } );
+    it( 'should set defaultProps', () => {
+        const wrapper = shallow( <Button /> );
+
+        expect( wrapper.text() ).toEqual( '' );
+    } );
     it( 'should have text prop as text', () => {
         const wrapper = shallow( <Button text="Submit" /> );
 
