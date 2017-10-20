@@ -2,8 +2,9 @@ module.exports = {
     verbose                    : true,
     coverageDirectory          : './coverage',
     coveragePathIgnorePatterns : [
-        '<root_dir>/src/.next/',
-        '<root_dir>/node_modules/',
+        './src/.next/',
+        './node_modules/',
     ],
     coverageReporters : [ 'json' ],
+    setupFiles        : [ './src/utils/shim.js' ],
 };
