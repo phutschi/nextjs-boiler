@@ -40,17 +40,11 @@ Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overvi
 ├── src
 │   ├── modules
 │   │   └── components
-│   │       ├── actionTypes.js
-│   │       ├── actions.js
-│   │       ├── components
-│   │       │   ├── button
-│   │       │   │   ├── __tests__
-│   │       │   │   │   └── button.test.js
-│   │       │   │   └── index.js
+│   │       ├── button
+│   │       │   ├── __tests__
+│   │       │   │   └── button.test.js
 │   │       │   └── index.js
-│   │       ├── constants.js
-│   │       ├── index.js
-│   │       └── reducer.js
+│   │       └── index.js
 │   ├── pages
 │   │   ├── about.js
 │   │   └── index.js
@@ -58,7 +52,7 @@ Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overvi
 │       └── shim.js
 └── yarn.lock
 
-9 directories, 20 files
+8 directories, 15 files
 ```
 
 The default directory for next is `./src` so pages sit here as well as all modules that you may define. You may want to check this great article on how to structure your application:
