@@ -3,7 +3,7 @@
 import Button from 'components/button';
 
 const About = () => (
-    <Button>Hello, Beauty!</Button>
+    <Button text="Hello, Beauty!" />
 )
 
 export default About

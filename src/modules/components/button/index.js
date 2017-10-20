@@ -3,11 +3,11 @@
 import * as React from 'react';
 
 type Props = {
-    children?: React.Node,
+    text?: string,
 };
 
-const Button = ( { children }: Props ) => <button type="button">{children}</button>;
+const Button = ( { text }: Props ) => <button type="button">{text}</button>;
 
-Button.defaultProps = { children : [] };
+Button.defaultProps = { text : '' };
 
 export default Button;
