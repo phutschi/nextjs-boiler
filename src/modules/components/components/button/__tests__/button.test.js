@@ -9,7 +9,7 @@ configure( { adapter : new Adapter() } );
 
 describe( 'Button Component', () => {
     it( 'should render', () => {
-        const wrapper = shallow( <Button text="Submit" /> );
+        const wrapper = shallow( <Button>Submit</Button> );
 
         expect( wrapper.text() ).toEqual( 'Submit' );
     } );

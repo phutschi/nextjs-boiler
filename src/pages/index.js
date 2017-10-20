@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 
+import { Button } from '../modules/components'
+
 const Index = () => (
     <nav>
         <Link href="/about">
-            <a>About</a>
+            <Button>About</Button>
         </Link>
     </nav>
 );
