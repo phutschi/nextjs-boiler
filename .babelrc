@@ -1,18 +1,24 @@
 {
-    "env": {
-        "development": {
-            "presets": "next/babel"
-        },
-        "production": {
-            "presets": "next/babel"
-        },
-        "test": {
-            "presets": [
-                ["env", {
-                    "modules": "commonjs"
-                }],
-                "next/babel"
-            ]
-        }
+  "plugins": [
+    ["module-alias", [{ "src": "./src/modules", "expose": "modules" }]]
+  ],
+  "env": {
+    "development": {
+      "presets": "next/babel"
+    },
+    "production": {
+      "presets": "next/babel"
+    },
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "next/babel"
+      ]
     }
+  }
 }
