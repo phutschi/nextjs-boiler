@@ -1,6 +1,6 @@
 # nextjs-eslint-jest-flow
 
-This package is meant to give fast start into creating react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
+This package is meant to give fast start into creating small react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
 
 ## Tree
 
@@ -11,14 +11,32 @@ This package is meant to give fast start into creating react applications. It us
 ├── .flowconfig
 ├── .gitignore
 ├── README.md
+├── coverage
+│   └── coverage-final.json
+├── jest.config.js
 ├── package.json
 ├── src
 │   ├── modules
-│   └── pages
-│       └── index.js
+│   │   └── components
+│   │       ├── actionTypes.js
+│   │       ├── actions.js
+│   │       ├── components
+│   │       │   ├── button
+│   │       │   │   ├── __tests__
+│   │       │   │   │   └── button.test.js
+│   │       │   │   └── index.js
+│   │       │   └── index.js
+│   │       ├── constants.js
+│   │       ├── index.js
+│   │       └── reducer.js
+│   ├── pages
+│   │   ├── about.js
+│   │   └── index.js
+│   └── utils
+│       └── shim.js
 └── yarn.lock
 
-3 directories, 8 files
+9 directories, 20 files
 ```
 
 The default directory for next is `./src` so pages sit here as well as all modules that you may define. You may want to check this great article on how to structure your application:
@@ -42,6 +60,7 @@ npm install
 npm run dev # starts the development server with hot module reload etc.
 npm run build # builds your project for production in ./src
 npm run start # starts your built project (for production)
+npm run test # run tests with jest
 ```
 
 Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overview on how to use next.
