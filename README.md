@@ -61,7 +61,7 @@ The default directory for next is `./src` so pages sit here as well as all modul
 
 ## Structure
 ### Modules
-The modules folder includes everything that is not a page like components, authentication or whatever. Every modules goes in it's own folder and has for example the following tree:
+The modules folder includes everything that is not a page like components or whatever. Every module goes in it's own folder and has for example the following tree:
 
 ```
 .
