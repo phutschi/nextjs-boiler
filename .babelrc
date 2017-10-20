@@ -1,6 +1,6 @@
 {
   "plugins": [
-    ["module-alias", [{ "src": "./src/modules", "expose": "modules" }]]
+    ["module-alias", [{ "src": "./src/modules/components", "expose": "components" }]]
   ],
   "env": {
     "development": {

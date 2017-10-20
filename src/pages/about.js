@@ -1,9 +1,9 @@
 /* global React */
 
-import { Button } from 'modules/components/components';
+import Button from 'components/button';
 
 const About = () => (
-    <Button>Hello, beauty!</Button>
+    <Button>Hello, Beauty!</Button>
 )
 
 export default About
