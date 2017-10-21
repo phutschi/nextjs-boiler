@@ -20,6 +20,7 @@ npm run dev # starts the development server with hot module reload etc.
 npm run build # builds your project for production in ./src
 npm run start # starts your built project (for production)
 npm run test # run tests with jest
+npm export # exports the project to a static website into the .export folder
 ```
 
 Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overview on how to use next.
