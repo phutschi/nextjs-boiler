@@ -1,3 +1,4 @@
 src/.next/
 yarn.lock
 node_modules/
+.export/

@@ -8,17 +8,18 @@
     "start": "next start ./src",
     "dev": "next ./src",
     "build": "next build ./src",
+    "export": "next export -o ./.export/ ./src",
     "flow": "flow",
     "test": "jest"
   },
   "dependencies": {
+    "babel-plugin-module-alias": "^1.6.0",
     "next": "^4.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
-    "babel-plugin-module-alias": "^1.6.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
