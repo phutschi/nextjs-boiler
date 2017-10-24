@@ -9,6 +9,7 @@
     "dev": "next ./src",
     "build": "next build ./src",
     "export": "next export -o ./.export/ ./src",
+    "analyze": "ANALYZE=1 yarn build",
     "flow": "flow",
     "test": "jest"
   },
@@ -31,6 +32,7 @@
     "flow-bin": "^0.57.3",
     "jest": "^21.2.1",
     "jest-reporter": "^1.0.0",
-    "react-test-renderer": "16"
+    "react-test-renderer": "16",
+    "webpack-bundle-analyzer": "^2.9.0"
   }
 }
