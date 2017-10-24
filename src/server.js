@@ -31,7 +31,7 @@ app.prepare().then( () => {
 
     server.listen( port, err => {
         if ( err ) throw err;
-        console.log( `> Ready on http://localhost:${port}` );
+        console.log( `> Flying on http://localhost:${port} ✈️` );
     } );
 } );
 
