@@ -21,6 +21,7 @@ npm run build # builds your project for production in ./src
 npm run start # starts your built project (for production)
 npm run test # run tests with jest
 npm export # exports the project to a static website into the .export folder
+npm run analyze # builds the application and analyzes it with webpack-bundle-analyzer. Stores a static report to ./src/.next/analyze-report.html
 ```
 
 Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overview on how to use next.
