@@ -1,14 +1,16 @@
-const { ANALYZE } = process.env;
+const { ANALYZE, NODE_ENV } = process.env;
 
 module.exports = {
-    webpack : ( config ) => {
+    assetPrefix :
+        NODE_ENV === 'production' ? 'https://nextjseslintflow.b-cdn.net' : '',
+    webpack : config => {
         if ( ANALYZE ) {
             const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
 
             config.plugins.push(
                 new BundleAnalyzerPlugin( {
-                    analyzerMode    : 'static',
-                    reportFilename  : './analyze-report.html',
+                    analyzerMode   : 'static',
+                    reportFilename : './analyze-report.html',
                 } ),
             );
         }
