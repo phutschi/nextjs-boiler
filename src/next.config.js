@@ -1,8 +1,8 @@
-const { ANALYZE, NODE_ENV } = process.env;
+const { ANALYZE, NODE_ENV, CDN_URL } = process.env;
 
 module.exports = {
     assetPrefix :
-        NODE_ENV === 'production' ? 'https://nextjseslintflow.b-cdn.net' : '',
+        CDN_URL && NODE_ENV === 'production' ? CDN_URL : '',
     webpack : config => {
         if ( ANALYZE ) {
             const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );

@@ -1,10 +1,6 @@
 {
   "plugins": [
     [
-      "transform-assets-import-to-string",
-      { "baseDir": "static", "baseUri": "https://nextjseslintflowfile.b-cdn.net/" }
-    ],
-    [
       "module-alias",
       [{ "src": "./src/modules/components", "expose": "components" }]
     ]
