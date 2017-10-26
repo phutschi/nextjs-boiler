@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 type Props = {
-    text?: string,
+    text? : string,
 };
 
 const Button = ( { text }: Props ) => <button type="button">{text}</button>;
