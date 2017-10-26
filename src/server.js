@@ -10,7 +10,7 @@ const handle = app.getRequestHandler();
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache( {
     max    : 100,
-    maxAge : 1000 * 60 * 60, // 1hour
+    maxAge : 10000 * 60 * 60, // 10 hours, enough if your page doesnt change a lot
 } );
 
 app.prepare().then( () => {
@@ -31,7 +31,7 @@ app.prepare().then( () => {
 
     server.listen( port, err => {
         if ( err ) throw err;
-        console.log( `> Flying on http://localhost:${port} ✈️` );
+        console.log( `> Flying on http://localhost:${port} ✈️` ); // eslint-disable-line
     } );
 } );
 
