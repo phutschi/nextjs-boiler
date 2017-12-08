@@ -31,7 +31,7 @@ app.prepare().then( () => {
 
     server.listen( port, err => {
         if ( err ) throw err;
-        console.log( `> Flying on http://localhost:${port} ✈️` ); // eslint-disable-line
+        console.log( `> Flying on http://localhost:${port} in ${process.env.NODE_ENV} ✈️` ); // eslint-disable-line
     } );
 } );
 
