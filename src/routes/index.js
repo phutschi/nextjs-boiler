@@ -1,18 +1,10 @@
 // @flow
 
-type Route = {
-    name: string,
-    path: string
-}
+type RouteValues = any;
 
-const routes: Array<Route> = [
-    {
-        name : 'index',
-        path : '/',
-    }, {
-        name : 'about',
-        path : '/about',
-    },
-];
+const routes: RouteValues = {
+    index : '/',
+    about : '/about',
+};
 
 export default routes
