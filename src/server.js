@@ -10,7 +10,7 @@ const handle = app.getRequestHandler();
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache( {
     max    : 100,
-    maxAge : 10000 * 60 * 60, // 10 hours, enough if your page doesnt change a lot
+    maxAge : 10000 * 60 * 60, // 10 hours, enough if your page doesn't change a lot
 } );
 
 app.prepare().then( () => {
