@@ -57,7 +57,7 @@ function renderAndCache( req, res, pagePath, queryParams ) {
     app
         .renderToHTML( req, res, pagePath, queryParams )
         .then( html => {
-            // Let's cache this page
+        // Let's cache this page
             ssrCache.set( key, html );
 
             res.send( html );
