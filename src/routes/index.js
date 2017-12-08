@@ -9,6 +9,9 @@ const routes: Array<Route> = [
     {
         name : 'index',
         path : '/',
+    }, {
+        name : 'about',
+        path : '/about',
     },
 ];
 
