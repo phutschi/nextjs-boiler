@@ -6,5 +6,8 @@ module.exports = {
         './node_modules/',
     ],
     coverageReporters : [ 'json' ],
-    setupFiles        : [ './src/utils/shim.js' ],
+    setupFiles        : [
+        '<rootDir>/lib/shim.js',
+        '<rootDir>/lib/setup.js',
+    ],
 };
