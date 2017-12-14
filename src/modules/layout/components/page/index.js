@@ -3,6 +3,7 @@
 import * as React from 'react'
 
 import Head from '../head'
+import Main from '../main'
 
 type Props = {
     title?    : string,
@@ -16,7 +17,9 @@ const Page = ( { title, subtitle, children } : Props ) => (
             title={title}
             subTitle={subtitle}
         />
-        {children}
+        <Main>
+            {children}
+        </Main>
     </div>
 )
 
