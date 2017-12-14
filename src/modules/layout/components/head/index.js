@@ -3,6 +3,9 @@
 import * as React from 'react'
 
 import NextHead from 'next/head'
+import Router from 'next/router'
+
+import NProgress from 'nprogress'
 
 type Props = {
     description? : string,
@@ -11,6 +14,10 @@ type Props = {
     title?       : string,
     url?         : string,
 }
+
+Router.onRouteChangeStart = () => NProgress.start();
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 const Head = ( { description, ogImage, subTitle, title, url }: Props ) => (
     <NextHead>
@@ -21,6 +28,7 @@ const Head = ( { description, ogImage, subTitle, title, url }: Props ) => (
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+        <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/static/favicon.ico" />
