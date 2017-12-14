@@ -3,15 +3,14 @@
 import Link from 'next/link';
 
 import routes from '../routes';
-import Head from '../modules/layout/components/head'
+import Page from '../modules/layout/components/page'
 
 const Index = () => (
-    <nav>
-        <Head />
+    <Page title="nextjs-eslint-jest-flow" subtitle="index">
         <Link href={routes.about}>
             <a>About</a>
         </Link>
-    </nav>
+    </Page>
 );
 
 export default Index;

@@ -10,8 +10,8 @@ import NProgress from 'nprogress'
 type Props = {
     description? : string,
     ogImage?     : string,
-    subTitle?    : string,
-    title?       : string,
+    subTitle     : string,
+    title        : string,
     url?         : string,
 }
 
@@ -51,8 +51,6 @@ const Head = ( { description, ogImage, subTitle, title, url }: Props ) => (
 Head.defaultProps = {
     description : '',
     ogImage     : '',
-    subTitle    : '',
-    title       : '',
     url         : '',
 }
 

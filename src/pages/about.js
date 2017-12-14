@@ -1,13 +1,12 @@
 /* global React */
 
 import Button from '../modules/components/button';
-import Head from '../modules/layout/components/head'
+import Page from '../modules/layout/components/page'
 
 const About = () => (
-    <div>
-        <Head />
+    <Page>
         <Button text="Hello, Beauty!" />
-    </div>
+    </Page>
 );
 
 export default About

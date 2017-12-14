@@ -6,26 +6,21 @@ import Head from '../head'
 import Main from '../main'
 
 type Props = {
-    title?    : string,
-    subtitle? : string,
+    title     : string,
+    subTitle  : string,
     children  : React.Node,
 }
 
-const Page = ( { title, subtitle, children } : Props ) => (
+const Page = ( { title, subTitle, children } : Props ) => (
     <div>
         <Head
             title={title}
-            subTitle={subtitle}
+            subTitle={subTitle}
         />
         <Main>
             {children}
         </Main>
     </div>
 )
-
-Page.defaultProps = {
-    title    : '',
-    subtitle : '',
-}
 
 export default Page
