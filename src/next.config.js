@@ -17,8 +17,4 @@ module.exports = {
 
         return config;
     },
-    exportPathMap : () => {
-        // Put routes and their pages in here if you want to use a custom route
-        return { '/me' : { page : '/about' } };
-    },
 };
