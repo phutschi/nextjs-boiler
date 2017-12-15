@@ -2,10 +2,14 @@
 
 import * as React from 'react';
 
-const Loading = () => (
+type Props = {
+    text? : string
+};
+
+const Loading = ( { text } : Props ) => (
     <div className="loading">
         <div className="loading-wrapper">
-            <div className="loading-text">LOADING</div>
+            <div className="loading-text">{text}</div>
             <div className="loading-content" />
         </div>
         <style jsx>
@@ -132,6 +136,8 @@ const Loading = () => (
             `}
         </style>
     </div>
-)
+);
+
+Loading.defaultProps = { text : 'LOADING' };
 
 export default Loading;
