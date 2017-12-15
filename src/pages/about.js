@@ -6,7 +6,7 @@ import Loading from '../modules/components/loading';
 
 const About = () => (
     <Page>
-        <Loading />
+        <Loading fullscreen />
         <Button text="Hello, Beauty!" />
     </Page>
 );
