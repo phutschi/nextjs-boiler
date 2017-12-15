@@ -17,15 +17,15 @@ describe( '<Main />', () => {
     it( 'Renders without props', () => {
         const wrapper = shallow( <Main /> );
 
-        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 )
-        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( false )
+        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 );
+        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( false );
     } );
 
     it( 'Renders with props', () => {
         const wrapper = shallow( <Main black /> );
 
-        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 )
-        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( true )
+        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 );
+        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( true );
     } );
 
     it( 'Renders with child component', () => {
@@ -35,7 +35,7 @@ describe( '<Main />', () => {
             </Main>,
         );
 
-        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 )
-        expect( wrapper.find( 'div.main-child' ) ).toHaveLength( 1 )
+        expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 );
+        expect( wrapper.find( 'div.main-child' ) ).toHaveLength( 1 );
     } );
 } );

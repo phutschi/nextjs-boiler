@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react'
+import * as React from 'react';
 
-import NextHead from 'next/head'
-import Router from 'next/router'
+import NextHead from 'next/head';
+import Router from 'next/router';
 
-import NProgress from 'nprogress'
+import NProgress from 'nprogress';
 
 type Props = {
     description? : string,
@@ -46,12 +46,12 @@ const Head = ( { description, ogImage, subTitle, title, url }: Props ) => (
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     </NextHead>
-)
+);
 
 Head.defaultProps = {
     description : '',
     ogImage     : '',
     url         : '',
-}
+};
 
-export default Head
+export default Head;

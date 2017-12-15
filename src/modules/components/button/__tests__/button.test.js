@@ -11,7 +11,7 @@ describe( 'Button Component', () => {
     it( 'should render', () => {
         const wrapper = shallow( <Button /> );
 
-        expect( wrapper.exists ).toBeTruthy()
+        expect( wrapper.exists ).toBeTruthy();
     } );
     it( 'should set defaultProps', () => {
         const wrapper = shallow( <Button /> );

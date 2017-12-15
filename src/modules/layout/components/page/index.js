@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react'
+import * as React from 'react';
 
-import Head from '../head'
-import Main from '../main'
+import Head from '../head';
+import Main from '../main';
 
 type Props = {
     title     : string,
@@ -21,6 +21,6 @@ const Page = ( { title, subTitle, children } : Props ) => (
             {children}
         </Main>
     </div>
-)
+);
 
-export default Page
+export default Page;

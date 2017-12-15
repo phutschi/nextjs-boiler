@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react'
+import * as React from 'react';
 
 type Props = {
     black?   : boolean,
@@ -25,8 +25,8 @@ const Main = ( { black, children } : Props ) => (
             `}
         </style>
     </div>
-)
+);
 
-Main.defaultProps = { black : false }
+Main.defaultProps = { black : false };
 
-export default Main
+export default Main;

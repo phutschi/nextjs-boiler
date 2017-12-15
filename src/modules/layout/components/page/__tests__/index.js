@@ -17,35 +17,35 @@ describe( '<Page />', () => {
     } );
 
     it( 'Renders without props', () => {
-        const wrapper = shallow( <Page /> )
+        const wrapper = shallow( <Page /> );
 
-        expect( wrapper.find( Head ) ).toHaveLength( 1 )
-        expect( wrapper.find( Main ) ).toHaveLength( 1 )
+        expect( wrapper.find( Head ) ).toHaveLength( 1 );
+        expect( wrapper.find( Main ) ).toHaveLength( 1 );
     } );
 
     it( 'Passes props to Head', () => {
-        const title = 'title'
-        const subTitle = 'subTitle'
+        const title = 'title';
+        const subTitle = 'subTitle';
         const wrapper = mount(
             <Page title={title} subTitle={subTitle} />,
-        )
+        );
 
         expect( wrapper.find( Head ).props() ).toMatchObject( {
             title,
             subTitle,
-        } )
+        } );
     } );
 
     it( 'Renders children in Main', () => {
-        const title = 'title'
-        const subTitle = 'subTitle'
+        const title = 'title';
+        const subTitle = 'subTitle';
         const wrapper = mount(
             <Page title={title} subTitle={subTitle}>
                 <div className="in-main" />
             </Page>
             ,
-        )
+        );
 
-        expect( wrapper.find( Main ).find( 'div.in-main' ) ).toHaveLength( 1 )
+        expect( wrapper.find( Main ).find( 'div.in-main' ) ).toHaveLength( 1 );
     } );
 } );
