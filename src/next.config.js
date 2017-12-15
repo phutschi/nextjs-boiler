@@ -9,8 +9,9 @@ module.exports = {
 
             config.plugins.push(
                 new BundleAnalyzerPlugin( {
-                    analyzerMode   : 'static',
-                    reportFilename : './analyze-report.html',
+                    analyzerMode   : 'server',
+                    analyzerPort   : 8888,
+                    openAnalyzer   : true,
                 } ),
             );
         }
