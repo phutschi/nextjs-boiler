@@ -1,13 +1,17 @@
 /* global React, expect */
 
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
-import Button from 'components/button';
+import Button from '../';
 
-configure( { adapter : new Adapter() } );
+describe( '<Button />', () => {
+    it( 'Snapshot', () => {
+        const wrapper = renderer.create( <Button /> ).toJSON();
 
-describe( 'Button Component', () => {
+        expect( wrapper ).toMatchSnapshot();
+    } );
+
     it( 'should render', () => {
         const wrapper = shallow( <Button /> );
 

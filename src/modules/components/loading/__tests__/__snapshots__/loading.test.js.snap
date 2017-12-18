@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> Snapshot 1`] = `
+<div
+  className="jsx-3213080583 loading-wrapper "
+>
+  <div
+    className="jsx-3213080583 loading"
+  />
+</div>
+`;
