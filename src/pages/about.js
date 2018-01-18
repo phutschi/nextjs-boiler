@@ -1,8 +1,8 @@
 /* global React */
 
-import Button from '../modules/components/button';
-import Page from '../modules/layout/components/page';
-import Loading from '../modules/components/loading';
+import Button from '../modules/components/Button';
+import Page from '../modules/layout/components/Page';
+import Loading from '../modules/components/Loading';
 
 const About = () => (
     <Page>
