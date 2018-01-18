@@ -37,24 +37,62 @@ Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overvi
 ├── README.md
 ├── coverage
 │   └── coverage-final.json
+├── flow-typed
+│   ├── comma-number.js
+│   ├── next.js
+│   ├── react-youtube.js
+│   └── ui.js
 ├── jest.config.js
+├── lib
+│   ├── setup.js
+│   └── shim.js
 ├── package.json
 ├── src
 │   ├── modules
-│   │   └── components
-│   │       ├── button
-│   │       │   ├── __tests__
-│   │       │   │   └── button.test.js
-│   │       │   └── index.js
-│   │       └── index.js
+│   │   ├── components
+│   │   │   └── components
+│   │   │       ├── Button
+│   │   │       │   ├── __tests__
+│   │   │       │   │   ├── __snapshots__
+│   │   │       │   │   │   └── button.test.js.snap
+│   │   │       │   │   └── button.test.js
+│   │   │       │   └── index.js
+│   │   │       ├── Loading
+│   │   │       │   ├── __tests__
+│   │   │       │   │   ├── __snapshots__
+│   │   │       │   │   │   └── loading.test.js.snap
+│   │   │       │   │   └── loading.test.js
+│   │   │       │   └── index.js
+│   │   │       └── index.js
+│   │   └── layout
+│   │       └── components
+│   │           ├── Head
+│   │           │   ├── __tests__
+│   │           │   │   ├── __snapshots__
+│   │           │   │   │   └── head.test.js.snap
+│   │           │   │   └── head.test.js
+│   │           │   └── index.js
+│   │           ├── Main
+│   │           │   ├── __tests__
+│   │           │   │   ├── __snapshots__
+│   │           │   │   │   └── main.test.js.snap
+│   │           │   │   └── main.test.js
+│   │           │   └── index.js
+│   │           └── index.js
+│   ├── next.config.js
 │   ├── pages
 │   │   ├── about.js
 │   │   └── index.js
-│   └── utils
-│       └── shim.js
+│   ├── routes
+│   │   └── index.js
+│   ├── server.js
+│   └── static
+│       ├── logo.png
+│       ├── normalize.css
+│       └── nprogress.css
 └── yarn.lock
 
-8 directories, 15 files
+24 directories, 37 files
 ```
 
 The default directory for next is `./src` so pages sit here as well as all modules that you may define. You may want to check this great article on how to structure your application:
