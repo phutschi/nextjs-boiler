@@ -18,22 +18,26 @@ const Main = ( { primary, inverted, children } : Props ) => {
     return (
         <div className={mainClassNames}>
             {children}
-            <style jsx>
+            <style jsx global>
                 {`
-                .main {
-                    margin: 0;
-                }
+                    a {
+                        color: maroon;
+                    }
 
-                .main.primary {
-                    background-color: white;
-                    color: black;
-                }
+                    .main {
+                        margin: 0;
+                    }
 
-                .main.inverted {
-                    background-color: black;
-                    color: white;
-                }
-            `}
+                    .main.primary {
+                        background-color: white;
+                        color: black;
+                    }
+
+                    .main.inverted {
+                        background-color: black;
+                        color: white;
+                    }
+                `}
             </style>
         </div>
     );
