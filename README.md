@@ -8,7 +8,7 @@ This boilerplate is designed to give you a quick start on working with awesome [
 ```zsh
 git clone https://github.com/quiez/nextjs-boiler <your-project-name>
 cd <your-project-name>
-rm -rf .git/ # So you don't iclude all my commits in your new project
+rm -rf .git/ # So you don't have all my commits in your new project
 git init # To reinitialize git (optional, only if you want to use it)
 npm install
 ```
