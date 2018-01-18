@@ -1,4 +1,4 @@
-import * as React from 'react';
+/* global React */
 
 import { Head, Main } from '../modules/layout/components';
 
