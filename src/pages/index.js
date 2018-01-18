@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 
-import routes from '../routes';
-import Page from '../modules/layout/components/Page';
+import { Head, Main, Navbar } from '../modules/layout/components';
 
 const Index = () => (
-    <Page title="nextjs-eslint-jest-flow" subtitle="index">
-        <Link href={routes.about}>
-            <a>About</a>
-        </Link>
-    </Page>
+    <div>
+        <Head title="nextjs-boiler" subtitle="index " />
+        <Main primary>
+            <div>Hello, World!</div>
+        </Main>
+    </div>
 );
 
 export default Index;

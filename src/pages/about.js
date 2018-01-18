@@ -1,14 +1,16 @@
 /* global React */
 
-import Button from '../modules/components/Button';
-import Page from '../modules/layout/components/Page';
-import Loading from '../modules/components/Loading';
+import { Button, Loading } from '../modules/components/components';
+
+import { Head, Main } from '../modules/layout/components';
 
 const About = () => (
-    <Page>
-        <Loading fullscreen />
-        <Button text="Hello, Beauty!" />
-    </Page>
+    <div>
+        <Head title="nextjs-boiler" subtitle="about" />
+        <Main primary>
+            <Loading fullscreen />
+        </Main>
+    </div>
 );
 
 export default About;

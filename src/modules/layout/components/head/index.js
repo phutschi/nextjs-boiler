@@ -10,7 +10,7 @@ import NProgress from 'nprogress';
 type Props = {
     description? : string,
     ogImage?     : string,
-    subTitle     : string,
+    subtitle     : string,
     title        : string,
     url?         : string,
 }
@@ -19,11 +19,11 @@ Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-const Head = ( { description, ogImage, subTitle, title, url }: Props ) => (
+const Head = ( { description, ogImage, subtitle, title, url }: Props ) => (
     <NextHead>
         <meta charSet="UTF-8" />
         <title>
-            {title}{subTitle && ` | ${subTitle}` }
+            {title}{subtitle && ` | ${subtitle}` }
         </title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

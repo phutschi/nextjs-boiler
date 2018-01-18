@@ -1,32 +1,47 @@
 // @flow
 
 import * as React from 'react';
+import classNames from 'classnames';
 
 type Props = {
-    black?   : boolean,
+    primary?  : boolean,
+    inverted? : boolean,
     children : React.Node,
 }
 
-const Main = ( { black, children } : Props ) => (
-    <div className={`main ${black ? 'black' : ''}`}>
-        {children}
-        <style jsx>
-            {`
+const Main = ( { primary, inverted, children } : Props ) => {
+    const mainClassNames = classNames( 'main', {
+        primary,
+        inverted,
+    } );
+
+    return (
+        <div className={mainClassNames}>
+            {children}
+            <style jsx>
+                {`
                 .main {
-                    background-color: white;
-                    color: black;
                     margin: 0;
                 }
 
-                .black {
+                .main.primary {
+                    background-color: white;
+                    color: black;
+                }
+
+                .main.inverted {
                     background-color: black;
                     color: white;
                 }
             `}
-        </style>
-    </div>
-);
+            </style>
+        </div>
+    );
+};
 
-Main.defaultProps = { black : false };
+Main.defaultProps = {
+    primary  : false,
+    inverted : false,
+};
 
 export default Main;
