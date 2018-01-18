@@ -1,13 +1,15 @@
-# nextjs-eslint-jest-flow
+# nextjs-boiler
 
-This package is meant to give fast start into creating small react applications. It uses [zeit/next.js](https://github.com/zeit/next.js) as framework and [facebook/jest](https://github.com/facebook/jest) for testing. It also integrates [facebook/flow](https://github.com/facebook/flow) for static typing.
+This boilerplate is designed to give you a quick start on working with awesome [next.js](https://github.com/zeit/next.js). It packs some very useful things like `jest`, `eslint`, `flow`, etc. so you can start right away with writing your application. It also comews with a custom configuration for next.js which gives you the possibilty to use a CDN to host your app and to analyze it with `webpack-bundle-analyzer`.
 
 ## How to use
 1. Clone this repo & install dependencies:
 
 ```zsh
-git clone https://github.com/quiez/nextjs-eslint-jest-flow <your-project-name>
+git clone https://github.com/quiez/nextjs-boiler <your-project-name>
 cd <your-project-name>
+rm -rf .git/ # So you don't iclude all my commits in your new project
+git init # To reinitialize git (optional, only if you want to use it)
 npm install
 ```
 
@@ -25,114 +27,15 @@ npm run analyze # builds the application and analyzes it with webpack-bundle-ana
 ```
 
 Take a look at [learnnextjs.com](https://learnnextjs.com/) to get a great overview on how to use next.
-
-## Tree
-
-```
-.
-├── .babelrc
-├── .eslintrc
-├── .flowconfig
-├── .gitignore
-├── README.md
-├── coverage
-│   └── coverage-final.json
-├── flow-typed
-│   ├── comma-number.js
-│   ├── next.js
-│   ├── react-youtube.js
-│   └── ui.js
-├── jest.config.js
-├── lib
-│   ├── setup.js
-│   └── shim.js
-├── package.json
-├── src
-│   ├── modules
-│   │   ├── components
-│   │   │   └── components
-│   │   │       ├── Button
-│   │   │       │   ├── __tests__
-│   │   │       │   │   ├── __snapshots__
-│   │   │       │   │   │   └── button.test.js.snap
-│   │   │       │   │   └── button.test.js
-│   │   │       │   └── index.js
-│   │   │       ├── Loading
-│   │   │       │   ├── __tests__
-│   │   │       │   │   ├── __snapshots__
-│   │   │       │   │   │   └── loading.test.js.snap
-│   │   │       │   │   └── loading.test.js
-│   │   │       │   └── index.js
-│   │   │       └── index.js
-│   │   └── layout
-│   │       └── components
-│   │           ├── Head
-│   │           │   ├── __tests__
-│   │           │   │   ├── __snapshots__
-│   │           │   │   │   └── head.test.js.snap
-│   │           │   │   └── head.test.js
-│   │           │   └── index.js
-│   │           ├── Main
-│   │           │   ├── __tests__
-│   │           │   │   ├── __snapshots__
-│   │           │   │   │   └── main.test.js.snap
-│   │           │   │   └── main.test.js
-│   │           │   └── index.js
-│   │           └── index.js
-│   ├── next.config.js
-│   ├── pages
-│   │   ├── about.js
-│   │   └── index.js
-│   ├── routes
-│   │   └── index.js
-│   ├── server.js
-│   └── static
-│       ├── logo.png
-│       ├── normalize.css
-│       └── nprogress.css
-└── yarn.lock
-
-24 directories, 37 files
-```
-
-The default directory for next is `./src` so pages sit here as well as all modules that you may define. You may want to check this great article on how to structure your application:
-
-[Three Rules For Structuring (Redux) Applications](https://jaysoo.ca/2016/02/28/organizing-redux-application/)
-
 ## Structure
-### Modules
-The modules folder includes everything that is not a page like components or whatever. Every module goes in it's own folder and has for example the following tree:
+The default directory for next is `./src` so pages sit here as well as all modules that you may define. You may want to check this great article on how to structure your application: [Three Rules For Structuring (Redux) Applications](https://jaysoo.ca/2016/02/28/organizing-redux-application/)
 
-```
-.
-└── components
-    ├── button
-    │   ├── __tests__
-    │   │   └── button.test.js
-    │   └── index.js
-    └── index.js
-```
+### Folders
 
-`button/index.js` defines the button and exports it as default. In `components/index.js` you would import all components and export them as named exports:
-
-```javascript
-import Button from './button';
-
-export { Button }
-```
-
-You could now import the components directly or use the `module-alias` plugin defined in `.babelrc`:
-
-```javascript
-"plugins": [
-    ["module-alias", [{ "src": "./src/modules/components", "expose": "components" }]]
-  ],
-```
-
-This creates an alias `components` which always points to `./src/modules/components`. This makes it even easier to import the components. All you need to do is:
-
-```javascript
-import Button from 'components/button';
-// OR
-import { Button } from 'components';
-```
+|directory|description|
+|---------|-----------|
+|./src|starting point for the application|
+|./src/pages|put all your pages here|
+|./src/modules|put all modules here|
+|./src/modules/components|here I put all components that I build (Button, Loading, etc.). Everything thats basic components.|
+|./src/modules/layout|here I put all components that belong to the layout of the page (Head, Main, Footer, etc.).|
