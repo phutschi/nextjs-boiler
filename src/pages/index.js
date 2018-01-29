@@ -9,7 +9,7 @@ const Index = () => (
             <div className="intro">
                 <div className="title">nextjs-boiler</div>
                 <div className="subtitle">by Philipp Wruck (<a href="https://twitter.com/phutschi" rel="noopener noreferrer" target="_blank">@phutschi</a>)</div>
-                <div className="subtitle">Happy Coding!</div>
+                <div className="subtitle">Happy Coding ⌥</div>
             </div>
         </Main>
     </div>
