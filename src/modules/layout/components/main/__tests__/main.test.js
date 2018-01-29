@@ -18,17 +18,18 @@ describe( '<Main />', () => {
         const wrapper = shallow( <Main /> );
 
         expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 );
-        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( false );
+        expect( wrapper.find( 'div.main' ).hasClass( 'primary' ) ).toEqual( false );
+        expect( wrapper.find( 'div.main' ).hasClass( 'inverted' ) ).toEqual( false );
     } );
 
     it( 'Renders with props', () => {
-        const wrapper = shallow( <Main black /> );
+        const wrapper = shallow( <Main primary /> );
 
         expect( wrapper.find( 'div.main' ) ).toHaveLength( 1 );
-        expect( wrapper.find( 'div.main' ).hasClass( 'black' ) ).toEqual( true );
+        expect( wrapper.find( 'div.main' ).hasClass( 'primary' ) ).toEqual( true );
     } );
 
-    it( 'Renders with child component', () => {
+    it( 'Renders with child components', () => {
         const wrapper = shallow(
             <Main>
                 <div className="main-child" />

@@ -28,19 +28,19 @@ describe( '<Head />', () => {
     } );
 
     it( 'Renders with deafault title and subTitle', () => {
-        const subTitle = 'Home';
-        const wrapper = shallow( <Head subTitle={subTitle} /> );
+        const subtitle = 'Home';
+        const wrapper = shallow( <Head subtitle={subtitle} /> );
 
         expect( wrapper.find( 'title' ).text() ).toEqual(
-            ` | ${subTitle}`,
+            ` | ${subtitle}`,
         );
     } );
 
-    it( 'Renders with custom title and subTitle', () => {
+    it( 'Renders with custom title and subtitle', () => {
         const title = '';
-        const subTitle = 'Home';
-        const wrapper = shallow( <Head title={title} subTitle={subTitle} /> );
+        const subtitle = 'Home';
+        const wrapper = shallow( <Head title={title} subtitle={subtitle} /> );
 
-        expect( wrapper.find( 'title' ).text() ).toEqual( `${title} | ${subTitle}` );
+        expect( wrapper.find( 'title' ).text() ).toEqual( `${title} | ${subtitle}` );
     } );
 } );
