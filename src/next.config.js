@@ -1,4 +1,5 @@
 const { ANALYZE, NODE_ENV, CDN_URL } = process.env;
+const withSass = require( '@zeit/next-sass' );
 
 module.exports = {
     assetPrefix :
@@ -19,3 +20,5 @@ module.exports = {
         return config;
     },
 };
+
+module.exports = withSass();

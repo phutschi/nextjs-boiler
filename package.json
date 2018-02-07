@@ -16,11 +16,13 @@
         "test:watch": "jest --watch"
     },
     "dependencies": {
+        "@zeit/next-sass": "^0.0.9",
         "babel-plugin-module-alias": "^1.6.0",
         "classnames": "^2.2.5",
         "express": "^4.16.2",
         "lru-cache": "^4.1.1",
         "next": "^5.0.0",
+        "node-sass": "^4.7.2",
         "nprogress": "^0.2.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0"
