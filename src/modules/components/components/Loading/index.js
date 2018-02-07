@@ -1,19 +1,10 @@
 /* @flow */
 
 import * as React from 'react';
+import classNames from 'classnames';
 
-import './main.scss';
+import theme from './main.scss';
 
-type Props = {
-    fullscreen? : boolean
-};
-
-const Loading = ( { fullscreen } : Props ) => (
-    <div className={`loading-wrapper ${fullscreen ? 'fullscreen' : ''}`}>
-        <div className="loading" />
-    </div>
-);
-
-Loading.defaultProps = { fullscreen : false };
+const Loading = () => <div className={theme.loading} />;
 
 export default Loading;

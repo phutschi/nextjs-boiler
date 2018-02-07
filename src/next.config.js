@@ -21,4 +21,4 @@ module.exports = {
     },
 };
 
-module.exports = withSass();
+module.exports = withSass( { cssModules : true } );

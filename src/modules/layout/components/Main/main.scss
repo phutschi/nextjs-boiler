@@ -1,19 +1,23 @@
+*, html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 a {
     color: maroon;
 }
 
 .main {
     margin: 0;
-}
 
-.main.primary {
-    background-color: white;
-    color: black;
-}
+    &.primary {
+        background-color: white;
+        color: black;
+    }
 
-.main.inverted {
-    background-color: black;
-    color: white;
+    &.inverted {
+        background-color: black;
+        color: white;
+    }
 }
 
 .intro {
@@ -24,13 +28,11 @@ a {
 }
 
 .title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 24px;
     text-align: center;
 }
 
 .subtitle {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 12px;
     color: #666;
     margin: 15px 0 0;
