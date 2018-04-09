@@ -1,26 +1,44 @@
 /* global React */
 
 import Link from 'next/link';
-import { connect } from 'react-redux';
+import { withRouter } from 'next/router';
+
+import classNames from 'classnames';
+
+import routes from '../../../../routes';
 
 import theme from './main.scss';
 
-const handlePathChange = e => {
-    console.log( e );
+const Navigation = ( { router } ) => {
+    const handleLinkClick = href => event => {
+        event.preventDefault();
+        router.push( href );
+    };
+
+    const navigationWrapperClassnames = classNames( theme.navigation );
+
+    return (
+        <div className={navigationWrapperClassnames}>
+            {
+                Object.keys( routes ).map( route => {
+                    const linkClassnames = classNames( theme.link, { [ theme.active ] : router.pathname === routes[ route ] } );
+                    const path = routes[ route ];
+
+                    return (
+                        <Link key={path} href={path}>
+                            <a
+                                href="#"
+                                onClick={handleLinkClick( path )}
+                                className={linkClassnames}
+                            >
+                                {route.charAt( 0 ).toUpperCase() + route.slice( 1 )}
+                            </a>
+                        </Link>
+                    );
+                } )
+            }
+        </div>
+    );
 };
 
-const Navigation = changePath => (
-    <div className={theme.navigation}>
-        <Link href="/"><a onClick={handlePathChange} >Home</a></Link>
-        <Link href="/redux"><a onClick={handlePathChange} >Redux</a></Link>
-    </div>
-);
-
-const mapState = state => ( { currentPath : state.router.currentPath } );
-
-const mapDispatch = ( { router: { changePath } } ) => ( { changePath : path => changePath( path ) } );
-
-export default connect(
-    mapState,
-    mapDispatch,
-)( Navigation );
+export default withRouter( Navigation );
