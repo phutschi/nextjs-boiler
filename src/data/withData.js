@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
 
-import initRematch from './initRematch';
+import initRedux from './initRedux';
 
 // Gets the display name of a JSX component for dev tools
 function getComponentDisplayName( Component ) {
@@ -25,7 +25,7 @@ export default ComposedComponent => {
             }
 
             if ( !process.browser ) {
-                const rematch = initRematch();
+                const rematch = initRedux();
                 const url = { query : ctx.query, pathname : ctx.pathname };
 
                 try {
@@ -63,7 +63,7 @@ export default ComposedComponent => {
         constructor( props ) {
             super( props );
 
-            this.rematch = initRematch( props.stateRedux );
+            this.rematch = initRedux( props.stateRedux );
         }
 
         render() {

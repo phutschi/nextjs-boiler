@@ -8,7 +8,7 @@ const create = () => {
     return init( { models } );
 };
 
-const initRematch = ( initialState ) => {
+const initRedux = ( initialState ) => {
     if ( !process.browser ) {
         return create( initialState );
     }
@@ -20,4 +20,4 @@ const initRematch = ( initialState ) => {
     return reduxStore;
 };
 
-export default initRematch;
+export default initRedux;
