@@ -27,6 +27,7 @@
         "nprogress": "^0.2.0",
         "react": "latest",
         "react-dom": "latest",
+        "react-key-handler": "^1.0.1",
         "react-redux": "^5.0.7"
     },
     "devDependencies": {
