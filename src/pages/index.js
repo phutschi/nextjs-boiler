@@ -1,8 +1,8 @@
 /* global React */
 
-import Link from 'next/link';
+import withData from '../data/withData';
 
-import { Head, Intro, Main } from '../modules/layout/components';
+import { Head, Intro, Main, Navigation } from '../modules/layout/components';
 
 import theme from './main.scss';
 
@@ -23,12 +23,10 @@ const Index = () => (
                 )
                 </div>
                 <div className={theme.subtitle}>Happy Coding ⌥</div>
-                <div className={theme.subtitle}>
-                    <Link href="/about"><a>About</a></Link>
-                </div>
             </Intro>
+            <Navigation />
         </Main>
     </div>
 );
 
-export default Index;
+export default withData( Index );

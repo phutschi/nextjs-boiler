@@ -16,6 +16,7 @@
         "test:watch": "jest --watch"
     },
     "dependencies": {
+        "@rematch/core": "^0.6.0",
         "@zeit/next-sass": "latest",
         "babel-plugin-module-alias": "^1.6.0",
         "classnames": "^2.2.5",
@@ -25,7 +26,8 @@
         "node-sass": "^4.7.2",
         "nprogress": "^0.2.0",
         "react": "latest",
-        "react-dom": "latest"
+        "react-dom": "latest",
+        "react-redux": "^5.0.7"
     },
     "devDependencies": {
         "babel-eslint": "^8.0.1",
