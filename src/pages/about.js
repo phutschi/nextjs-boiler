@@ -1,6 +1,8 @@
 /* global React */
 
-import { Head, Main } from '../modules/layout/components';
+import Link from 'next/link';
+
+import { Head, Main, Intro } from '../modules/layout/components';
 
 import theme from './main.scss';
 
@@ -8,10 +10,13 @@ const Index = () => (
     <div>
         <Head title="nextjs-boiler" subtitle="about" />
         <Main primary>
-            <div className={theme.intro}>
+            <Intro>
                 <div className={theme.title}>/about</div>
                 <div className={theme.subtitle}>Nothing to see here ¯\_(ツ)_/¯</div>
-            </div>
+                <div className={theme.subtitle}>
+                    <Link href="/"><a>Go back</a></Link>
+                </div>
+            </Intro>
         </Main>
     </div>
 );

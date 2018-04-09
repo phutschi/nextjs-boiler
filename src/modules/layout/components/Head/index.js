@@ -15,6 +15,7 @@ type Props = {
     url?         : string,
 }
 
+NProgress.configure( { showSpinner : false } );
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
