@@ -31,6 +31,7 @@ const Head = ( { description, ogImage, subtitle, title, url }: Props ) => (
         <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
         <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         <link rel="stylesheet" type="text/css" href="/static/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/_next/static/style.css" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/static/favicon.ico" />

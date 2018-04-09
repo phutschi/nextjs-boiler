@@ -3,8 +3,8 @@
 type RouteValues = any;
 
 const routes: RouteValues = {
-    index : '/',
-    about : '/about',
+    home  : '/',
+    redux : '/redux',
 };
 
 export default routes;
