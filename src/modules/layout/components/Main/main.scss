@@ -14,6 +14,15 @@ a {
     background-size: 100% .1em;
     background-position: 0 103%;
   }
+
+  &:active {
+    color: #555;
+    background-image: linear-gradient(120deg, #11998e 0%, #11998e 100%);
+    background-repeat: no-repeat;
+    // background-size: 100% .1em;
+    background-position: 0 103%;
+    transition: all 0.15s ease-in;
+  }
 }
 
 .main {
