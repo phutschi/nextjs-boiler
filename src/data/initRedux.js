@@ -4,17 +4,13 @@ import * as models from './models';
 
 let reduxStore = null;
 
-const create = () => {
-    return init( { models } );
-};
-
-const initRedux = ( initialState ) => {
+const initRedux = () => {
     if ( !process.browser ) {
-        return create( initialState );
+        return init( { models } );
     }
 
-    if  ( !reduxStore ) {
-        reduxStore = create( initialState );
+    if ( !reduxStore ) {
+        reduxStore = init( { models } );
     }
 
     return reduxStore;

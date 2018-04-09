@@ -15,43 +15,21 @@ export default ComposedComponent => {
         static displayName = `WithData(${getComponentDisplayName( ComposedComponent )})`;
         static propTypes = { stateRedux  : PropTypes.object.isRequired };
 
-        static async getInitialProps( ctx ) {
+        static async getInitialProps() {
             let stateRedux = {};
 
             // Evaluate the composed component's getInitialProps()
             let composedInitialProps = {};
             if ( ComposedComponent.getInitialProps ) {
-                composedInitialProps = await ComposedComponent.getInitialProps( ctx );
+                composedInitialProps = await ComposedComponent.getInitialProps();
             }
 
             if ( !process.browser ) {
-                const rematch = initRedux();
-                const url = { query : ctx.query, pathname : ctx.pathname };
+                const redux = initRedux();
 
-                try {
-                    // Run all GraphQL queries
-                    await getDataFromTree(
-                        <Provider store={rematch}>
-                            <ComposedComponent url={url} {...composedInitialProps} />
-                        </Provider>,
-                        {
-                            router : {
-                                asPath   : ctx.asPath,
-                                pathname : ctx.pathname,
-                                query    : ctx.query,
-                            },
-                        },
-                    );
-                } catch ( error ) {
-                    // Prevent Apollo Client GraphQL errors from crashing SSR.
-                    // Handle them in components via the data.error prop:
-                    // http://dev.apollodata.com/react/api-queries.html#graphql-query-data-error
-                }
-                // getDataFromTree does not call componentWillUnmount
-                // head side effect therefore need to be cleared manually
                 Head.rewind();
 
-                stateRedux = rematch.getState();
+                stateRedux = redux.getState();
             }
 
             return {
@@ -63,12 +41,12 @@ export default ComposedComponent => {
         constructor( props ) {
             super( props );
 
-            this.rematch = initRedux( props.stateRedux );
+            this.redux = initRedux();
         }
 
         render() {
             return (
-                <Provider store={this.rematch}>
+                <Provider store={this.redux}>
                     <ComposedComponent {...this.props} />
                 </Provider>
             );
