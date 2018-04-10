@@ -1,14 +1,14 @@
 {
     "name": "nextjs-boiler",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "server.js",
     "author": "Philipp Wruck <philipp@perspective.co>",
     "license": "MIT",
     "scripts": {
-        "start": "NODE_ENV=production node ./src/server.js",
-        "dev": "next ./src",
+        "start": "NODE_ENV=production micro",
+        "dev": "micro-dev --watch ./src/server.js",
         "build": "next build ./src",
-        "export": "next export -o ./.export/ ./src",
+        "export": "next export -o ./.export/",
         "analyze": "ANALYZE=1 yarn build",
         "flow": "flow",
         "test": "jest",
@@ -21,7 +21,8 @@
         "babel-plugin-module-alias": "^1.6.0",
         "classnames": "^2.2.5",
         "express": "^4.16.2",
-        "lru-cache": "^4.1.1",
+        "micro": "^9.1.4",
+        "micro-route": "^2.5.0",
         "next": "latest",
         "node-sass": "^4.7.2",
         "nprogress": "^0.2.0",
@@ -44,7 +45,30 @@
         "flow-bin": "^0.57.3",
         "jest": "^21.2.1",
         "jest-reporter": "^1.0.0",
+        "micro-dev": "^2.2.2",
         "react-test-renderer": "16",
         "webpack-bundle-analyzer": "^2.9.0"
+    },
+    "now": {
+        "name": "nextjs-boiler",
+        "alias": [
+            "nextjs-boiler.now.sh",
+            "phutschi.xyz"
+        ],
+        "env": {
+            "NODE_ENV": "production",
+            "CDN_URL": "https://phutschi.b-cdn.net"
+        },
+        "scale": {
+            "sfo1": {
+                "min": 0,
+                "max": 1
+            },
+            "bru1": {
+                "min": 1,
+                "max": 1
+            }
+        },
+        "public": true
     }
 }

@@ -1,10 +1,17 @@
 const { ANALYZE, NODE_ENV, CDN_URL } = process.env;
 const withSass = require( '@zeit/next-sass' );
 
-module.exports = {
-    assetPrefix :
-        CDN_URL && NODE_ENV === 'production' ? CDN_URL : '',
-    webpack : config => {
+const isProd = NODE_ENV === 'production';
+const hasCDNUrl = CDN_URL !== undefined;
+
+module.exports = withSass( {
+    cssModules       : true,
+    cssLoaderOptions : {
+        importLoaders  : 1,
+        localIdentName : '[local]___[hash:base64:5]',
+    },
+    assetPrefix : isProd && hasCDNUrl ? CDN_URL : '',
+    webpack( config ) {
         if ( ANALYZE ) {
             const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
 
@@ -19,6 +26,4 @@ module.exports = {
 
         return config;
     },
-};
-
-module.exports = withSass( { cssModules : true } );
+} );
