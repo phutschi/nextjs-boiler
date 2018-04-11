@@ -1,6 +1,6 @@
 {
     "rules": [
-        { "pathname": "/_next/static", "method": ["GET", "POST"], "dest": "https://phutschi.b-cdn.net/_next/static" },
-        { "pathname": "/_next/static/**", "method": ["GET", "POST"], "dest": "https://phutschi.b-cdn.net/_next/static" }
+        { "pathname": "/_next/static", "dest": "phutschi.b-cdn.net/_next/static" },
+        { "dest": "www.phutschi.xyz" }
     ]
 }

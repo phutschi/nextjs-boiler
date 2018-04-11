@@ -2,9 +2,6 @@
 
 type RouteValues = any;
 
-const routes: RouteValues = {
-    home  : '/',
-    redux : '/redux',
-};
+const routes: RouteValues = { home  : '/'  };
 
 export default routes;

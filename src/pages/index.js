@@ -22,7 +22,7 @@ const Index = () => (
                     </a>
                 )
                 </div>
-                <div className={theme.subtitle}>Happy Coding ⌥</div>
+                <div className={theme.subtitle}>Happy <a href="https://github.com/quiez/nextjs-boiler" target="_blank" rel="noopener noreferrer">Coding ⌥</a></div>
             </Intro>
             <Navigation />
         </Main>

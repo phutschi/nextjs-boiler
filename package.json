@@ -48,27 +48,5 @@
         "micro-dev": "^2.2.2",
         "react-test-renderer": "16",
         "webpack-bundle-analyzer": "^2.9.0"
-    },
-    "now": {
-        "name": "nextjs-boiler",
-        "alias": [
-            "nextjs-boiler.now.sh",
-            "phutschi.xyz"
-        ],
-        "env": {
-            "NODE_ENV": "production",
-            "CDN_URL": "https://phutschi.b-cdn.net"
-        },
-        "scale": {
-            "sfo1": {
-                "min": 0,
-                "max": 1
-            },
-            "bru1": {
-                "min": 1,
-                "max": 1
-            }
-        },
-        "public": true
     }
 }
