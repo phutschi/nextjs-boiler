@@ -1,6 +1,7 @@
 .title {
     font-size: 24px;
     text-align: center;
+     padding-top: 24px;
 }
 
 .subtitle {
@@ -16,4 +17,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.posts {
+    margin: 0 auto;
+    max-height: 600px;
+    overflow: scroll;
+
+    //ul {
+    //    list-style-type: none;
+    //}
 }

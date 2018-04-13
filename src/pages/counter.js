@@ -1,28 +1,26 @@
-/* global React */
+import * as React from 'react';
 
 import { connect } from 'react-redux';
 import KeyHandler, { KEYDOWN } from 'react-key-handler';
 
 import withData from '../data/withData';
 
-import { Head, Intro, Main, Navigation } from '../modules/layout/components';
+import {
+    Head,
+    Intro,
+    Main,
+    Navigation,
+} from '../modules/layout/components';
 
 import theme from './main.scss';
 
 type Props = {
-    count              : Number,
-    increment          : Function,
-    decrement          : Function,
-    fetchAllPostsAsync : Function,
-    items              : Array,
-    loading            : Boolean,
+    count     : Number,
+    increment : Function,
+    decrement : Function,
 }
 
-class Redux extends React.Component<Props> {
-    componentWillMount() {
-        this.props.fetchAllPostsAsync();
-    }
-
+class Counter extends React.Component<Props> {
     incrementCounter = () => this.props.increment();
     decrementCounter = () => {
         if ( this.props.count > 0 ) {
@@ -31,7 +29,7 @@ class Redux extends React.Component<Props> {
     };
 
     render() {
-        const { count, items, loading } = this.props;
+        const { count } = this.props;
 
         return (
             <div>
@@ -41,7 +39,7 @@ class Redux extends React.Component<Props> {
                 <Head title="nextjs-boiler" subtitle="index" />
                 <Main primary>
                     <Intro>
-                        <div className={theme.title}>redux</div>
+                        <div className={theme.title}>Counter</div>
                         <div className={theme.subtitle}>
                             {count}
                         </div>
@@ -49,15 +47,6 @@ class Redux extends React.Component<Props> {
                             <a role="link" className={theme.noselect} onClick={this.incrementCounter}>Increment!</a>
                         </div>
                     </Intro>
-                    {!loading &&
-                        <div className={theme.subtitle}>
-                            {items.length > 0 && items.map( post => (
-                                <div key={post.id}>
-                                    {post.name}
-                                </div>
-                            ) )}
-                        </div>
-                    }
                     <Navigation />
                 </Main>
             </div>
@@ -65,27 +54,16 @@ class Redux extends React.Component<Props> {
     }
 }
 
-const mapState = state => {
-    const { items, loading } = state.posts;
-    const { count } = state;
+const mapStateToProps = state => ( { count : state.count } );
 
-    return {
-        items,
-        loading,
-        count,
-    };
-};
-
-const mapDispatch = ( { count: { increment, decrement }, posts: { fetchAllPosts, fetchAllPostsAsync } } ) => ( {
-    fetchAllPosts,
-    fetchAllPostsAsync,
+const mapDispatchToProps = ( { count : { increment, decrement } } ) => ( {
     increment,
     decrement,
 } );
 
-const ReduxConnected = connect(
-    mapState,
-    mapDispatch,
-)( Redux );
+const CounterReduxConnected = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)( Counter );
 
-export default withData( ReduxConnected );
+export default withData( CounterReduxConnected );

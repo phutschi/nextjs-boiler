@@ -3,6 +3,7 @@
 import withData from '../data/withData';
 
 import { Head, Intro, Main, Navigation } from '../modules/layout/components';
+import { Loading } from '../modules/components/components';
 
 import theme from './main.scss';
 
@@ -24,8 +25,8 @@ const Index = () => (
                 </div>
                 <div className={theme.subtitle}>Happy <a href="https://github.com/quiez/nextjs-boiler" target="_blank" rel="noopener noreferrer">Coding ⌥</a></div>
             </Intro>
-            <Navigation />
         </Main>
+        <Navigation />
     </div>
 );
 

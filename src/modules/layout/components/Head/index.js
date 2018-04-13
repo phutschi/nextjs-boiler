@@ -7,8 +7,6 @@ import Router from 'next/router';
 
 import NProgress from 'nprogress';
 
-// const { NODE_ENV, CDN_URL } = process.env;
-
 type Props = {
     description? : string,
     ogImage?     : string,
