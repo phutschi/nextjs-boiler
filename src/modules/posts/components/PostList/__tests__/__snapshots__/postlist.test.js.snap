@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostList /> Snapshot 1`] = `
+<div
+  className="postList"
+>
+  <div
+    className="postListItemContainer"
+  >
+    <div>
+      First Blog post
+    </div>
+    <div>
+      Second Blog Post
+    </div>
+  </div>
+</div>
+`;

@@ -13,4 +13,15 @@ describe( '<Intro />', () => {
 
         expect( wrapper ).toMatchSnapshot();
     } );
+
+    it( 'Renders with child components', () => {
+        const wrapper = shallow(
+            <Intro>
+                <div className="intro-child" />
+            </Intro>,
+        );
+
+        expect( wrapper.find( 'div.intro' ) ).toHaveLength( 1 );
+        expect( wrapper.find( 'div.intro-child' ) ).toHaveLength( 1 );
+    } );
 } );

@@ -21,7 +21,7 @@ const Navigation = ( { router } ) => {
         <div className={navigationWrapperClassnames}>
             {
                 Object.keys( routes ).map( route => {
-                    const linkClassnames = classNames( theme.link, { [ theme.active ] : router.pathname === routes[ route ] } );
+                    const linkClassnames = classNames( theme.link, { [ theme.active ] : router && router.pathname === routes[ route ] } );
                     const path = routes[ route ];
 
                     return (
