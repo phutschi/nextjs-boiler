@@ -2,10 +2,6 @@
 
 exports[`<Loading /> Snapshot 1`] = `
 <div
-  className="jsx-2108094180 loading-wrapper "
->
-  <div
-    className="jsx-2108094180 loading"
-  />
-</div>
+  className="loading"
+/>
 `;

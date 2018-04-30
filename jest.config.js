@@ -1,5 +1,6 @@
 module.exports = {
     verbose                    : true,
+    testPathIgnorePatterns     : [ '<rootDir>/.next/', '<rootDir>/node_modules/' ],
     coverageDirectory          : './coverage',
     coveragePathIgnorePatterns : [
         './src/.next/',
@@ -7,7 +8,9 @@ module.exports = {
     ],
     coverageReporters : [ 'json' ],
     setupFiles        : [
-        '<rootDir>/lib/shim.js',
-        '<rootDir>/lib/setup.js',
+        '<rootDir>/lib/jest.shim.js',
+        '<rootDir>/lib/jest.setup.js',
     ],
+    transform        : { '^.+\\.js?$' : 'babel-jest' },
+    moduleNameMapper : { '\\.(scss|less)$' : 'identity-obj-proxy' },
 };

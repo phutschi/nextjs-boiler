@@ -8,3 +8,4 @@ node_modules/
 coverage/
 rules.json
 now.json
+__mocks__/
