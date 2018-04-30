@@ -6,7 +6,6 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
 import PostList from '../';
-// import { Loading } from '../../../../components/components';
 
 const posts = [ {
     id    : 1,
