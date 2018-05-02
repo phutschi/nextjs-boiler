@@ -16,6 +16,7 @@
         "test:watch": "NODE_ENV=test jest --watch"
     },
     "dependencies": {
+        "@redux-beacon/google-tag-manager": "^1.0.0",
         "@rematch/core": "^0.6.0",
         "@zeit/next-sass": "latest",
         "babel-plugin-module-alias": "^1.6.0",
