@@ -1,32 +1,41 @@
+@import "../../../../_variables.scss";
+
 .navigation {
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  height: $navHeight;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 
-  .link {
-    color: #000;
-    cursor: pointer;
-    font-size: 12px;
-    margin: 0 6px;
-    padding: 3px 2px 0;
-    text-decoration: none;
-    background-image: linear-gradient(120deg, #cfd9df 0%, #e2ebf0 100%);
-    background-repeat: no-repeat;
-    background-size: 100% .1em;
-    background-position: 0 110%;
-    transition: background-size 0.15s ease-in, color .3s ease;
+  .navigationItem {
+    align-self: center;
+    margin: 0 12px;
+    display: inline-flex;
+    width: 100px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 
-    &:hover {
-      background-size: 100% 88%;
+    span {
+      cursor: pointer;
+      text-decoration: none;
+      color: $grey1;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      box-sizing: border-box;
+
+      &:hover {
+        color: $primary;
+      }
     }
 
     &.active {
-      background-size: 100% .1em;
-      background-position: 0 100%;
-      pointer-events: none;
-      cursor: default;
+      span {
+        border-top: 2px solid $primary;
+        color: $primary;
+      }
     }
   }
 }

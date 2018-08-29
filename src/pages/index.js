@@ -1,19 +1,23 @@
 /* global React */
 
-import withData from '../data/withData';
-
-import { Head, Intro, Main, Navigation } from '../modules/layout/components';
-import { Loading } from '../modules/components/components';
-
+// UI
+import Page from '../modules/layout/components/Page';
 import theme from './main.scss';
 
 const Index = () => (
-    <div>
-        <Head title="nextjs-boiler" subtitle="index" />
-        <Main primary>
-            <Intro>
-                <div className={theme.title}>nextjs-boiler</div>
-                <div className={theme.subtitle}>by Philipp Wruck (
+
+    <Page
+        title="nextjs-boiler"
+        subtitle="index"
+        hideFooter
+    >
+        <div className={theme.centeredContent}>
+            <div className={theme.title}>
+                <span>nextjs-boiler</span>
+            </div>
+            <div className={theme.subtitle}>
+                <span>
+                    by Philipp Wruck (
                     <a
                         href="https://twitter.com/phutschi"
                         rel="noopener noreferrer"
@@ -21,13 +25,31 @@ const Index = () => (
                     >
                         @phutschi
                     </a>
-                )
-                </div>
-                <div className={theme.subtitle}>Happy <a href="https://github.com/quiez/nextjs-boiler" target="_blank" rel="noopener noreferrer">Coding ⌥</a></div>
-            </Intro>
-        </Main>
-        <Navigation />
-    </div>
+                    )
+                </span>
+            </div>
+            <div className={theme.subtitle}>
+                <span>
+                    Happy
+                    <a
+                        href="https://github.com/quiez/nextjs-boiler"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Coding ⌥
+                    </a>
+                </span>
+            </div>
+        </div>
+        {/* TODO: move style somewhere else */}
+        <style jsx global>{`
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+        `}
+        </style>
+    </Page>
 );
 
-export default withData( Index );
+export default Index;

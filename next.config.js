@@ -14,9 +14,9 @@ const nextConfig = {
 
             config.plugins.push(
                 new BundleAnalyzerPlugin( {
-                    analyzerMode   : 'server',
-                    analyzerPort   : 8888,
-                    openAnalyzer   : true,
+                    analyzerMode : 'server',
+                    analyzerPort : 8888,
+                    openAnalyzer : true,
                 } ),
             );
         }

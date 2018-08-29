@@ -2,16 +2,18 @@
 
 import Link from 'next/link';
 import { withRouter } from 'next/router';
-
 import classNames from 'classnames';
-
 import routes from '../../../../routes';
-
+// UI
 import theme from './main.scss';
 
-const Navigation = ( { router } ) => {
+// Props
+type Props = { router: Object }
+
+const Navigation = ( { router }: Props ) => {
     const handleLinkClick = href => event => {
         event.preventDefault();
+
         router.push( href );
     };
 
@@ -20,20 +22,23 @@ const Navigation = ( { router } ) => {
     return (
         <div className={navigationWrapperClassnames}>
             {
-                Object.keys( routes ).map( route => {
-                    const linkClassnames = classNames( theme.link, { [ theme.active ] : router && router.pathname === routes[ route ] } );
+                Object.keys( routes ).map( ( route, index ) => {
+                    const linkClassnames = classNames( theme.navigationItem, { [ theme.active ] : router && router.pathname === routes[ route ] } );
                     const path = routes[ route ];
 
                     return (
-                        <Link key={path} href={path}>
-                            <a
-                                href="#"
-                                onClick={handleLinkClick( path )}
-                                className={linkClassnames}
-                            >
-                                {route.charAt( 0 ).toUpperCase() + route.slice( 1 )}
-                            </a>
-                        </Link>
+                        <div key={path} className={linkClassnames}>
+                            <Link href={path}>
+                                <span
+                                    tabIndex={index}
+                                    role="link"
+                                    onKeyPress={handleLinkClick( path )}
+                                    onClick={handleLinkClick( path )}
+                                >
+                                    {route.charAt( 0 ).toUpperCase() + route.slice( 1 )}
+                                </span>
+                            </Link>
+                        </div>
                     );
                 } )
             }
